@@ -1,37 +1,18 @@
 [![License GPL 3][badge-license]][copying]
-[![MELPA](https://melpa.org/packages/flycheck-swift-badge.svg)](https://melpa.org/#/flycheck-swift)
-[![MELPA](https://stable.melpa.org/packages/flycheck-swift-badge.svg)](https://melpa.org/#/flycheck-swift)
 
 # flycheck-swift
 
 Flycheck extension for Apple's Swift programming language.
+Updated for Swift 5 and minor customization name changes.
 
 ## Installation
-
-### Using MELPA
-
-Install `flycheck-swift` package from MELPA.
-
-Add the following line to the `~/.emacs.d/init.el` or `~/.emacs`.
-
-```
-(eval-after-load 'flycheck '(flycheck-swift-setup))
-```
-
-If you compile against iOS SDK, add the following lines:
-
-```
-(setq flycheck-swift-sdk-path "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk")
-;; ↑ Select the appropriate SDK version you use
-(setq flycheck-swift-target "arm64-apple-ios10")
-```
 
 ### Manual installation
 
 Install [Flycheck](http://www.flycheck.org/en/latest/user/installation.html).
 
 ```
-git clone --depth 1 https://github.com/swift-emacs/flycheck-swift.git
+git clone --depth 1 https://github.com/TangoGolfDigital/flycheck-swift
 cd flycheck-swift
 emacs --batch -l package -f package-initialize --eval '(package-install-file "flycheck-swift.el")'
 ```
@@ -55,7 +36,7 @@ If you compile against iOS SDK, add the following lines:
 Install [cask](https://github.com/cask/cask).
 
 ```
-git clone https://github.com/swift-emacs/flycheck-swift.git
+git clone https://github.com/TangoGolfDigital/flycheck-swift
 cd flycheck-swift
 make install
 ```
@@ -96,7 +77,7 @@ A list of source file paths to link against. Each path can be glob, i.e. `*.swif
 
 A list of framework search paths.
 
-### flycheck-swift-cc-include-search-paths
+### flycheck-swift-include-search-paths
 
 A list of include file search paths to pass to the Objective-C compiler.
 
